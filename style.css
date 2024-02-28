@@ -1,14 +1,27 @@
 body{
+    position: relative;
     background-color: black;
     color: white;
 }
 
-.side-bar-left, .center-content, .side-bar-right{
+.sidebar-left, .center-content, .sidebar-right{
     height: 90vh;
+    position: fixed;
 }
 
+.sidebar-right{
+    top: 0;
+    right: 0;
+}
+
+.center-content{
+    left: 17vw;
+}
+
+
+
 .command-bar{
-    max-height: 10vw;
+    height: 10%;
     background-color: rgb(15, 15, 15);
 }
 
@@ -51,6 +64,11 @@ a{
     font-size: 9pt;
     color: white;
     text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    transform: scale(1.05);
 }
 
 .fa-heart{
@@ -123,9 +141,28 @@ a{
     background-color: rgb(15, 15, 15);
 }
 
+.hidden-posts:hover{
+    color:white;
+    transform: scale(1.05);
+}
+
 .top-right-btn{
     font-size: 10pt;
     color: white;
     border: none;
     background-color: black;
+}
+
+.node{
+    height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.input-search{
+    color: white;
+    background-color: rgb(24, 24, 24);
+    border-radius: 15px;
+    border: 1px solid white;
+
 }
