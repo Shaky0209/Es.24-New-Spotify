@@ -61,7 +61,7 @@ const displayFnc = (array) => {
         
         let content = document.createElement("div");
         content.classList.add("p-3");
-        content.style.backgroundColor = "black";
+        content.style.backgroundColor = "rgb(18, 18, 18)";
         content.style.borderRadius = "10px";
         content.style.height = "100%"
         side.appendChild(content);
@@ -72,10 +72,12 @@ const displayFnc = (array) => {
         content.appendChild(img);
 
         let art = document.createElement("p");
+        art.classList.add("pt-2", "mb-1");
         art.innerText = element.artist.name;
         content.appendChild(art);
 
         let title = document.createElement("p");
+        title.style.color = "grey";
         title.innerText = element.album.title;
         content.appendChild(title);
 
