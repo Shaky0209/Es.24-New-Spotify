@@ -166,6 +166,7 @@ a:hover{
 }
 
 .input-search{
+    width: 100%;
     color: white;
     background-color: rgb(24, 24, 24);
     border-radius: 15px;
@@ -244,6 +245,7 @@ a:hover{
 .resp-input-search{
     width: 100%;
     border: none;
+    color: white;
     background-color: rgb(25, 25, 25);
 }
 
@@ -251,6 +253,7 @@ a:hover{
     position: relative;
     height: 25vw;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .img-search-card{
@@ -259,7 +262,6 @@ a:hover{
     top: 5vw;
     right: -3vw;
     rotate: 30deg;
-    z-index: 0;
 }
 
 .podcast, .for-you, .new-entry,
@@ -323,4 +325,14 @@ footer{
     .dynamic-content{
         height: 100vh;
     }    
+}
+
+@media screen and (max-width: 575px){
+    .evening-img{
+        height: 200px;
+    }
+
+    .evening-title{
+        font-size: 20pt;
+    }
 }

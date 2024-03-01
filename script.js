@@ -8,22 +8,26 @@ const searchInput = document.querySelector(".input-search");
 const node = document.querySelector(".row.node");
 const btmHomeBtn = document.querySelector(".bottom-home-btn");
 const btmSearchBtn = document.querySelector(".bottom-search-btn");
+const otherTitle = document.querySelector(".other-title");
 
 const closeRight = ()=>{
     sidebarRight.classList.add("d-none");
-    centerContent.classList.add("col-10");
-    centerContent.classList.remove("col-8");
+    centerContent.classList.remove("col-lg-8");
+    centerContent.classList.add("col-lg-10");
     hiddenPostsBtn.innerText = "VISUALIZZA ANNUNCI";
 }
 
 const toggleRight = ()=>{
     sidebarRight.classList.toggle("d-none");
-    centerContent.classList.toggle("col-10");
-    centerContent.classList.toggle("col-8");
+    
     if(hiddenPostsBtn.innerText === "NASCONDI ANNUNCI"){
         hiddenPostsBtn.innerHTML = "VISUALIZZA ANNUNCI";
+        centerContent.classList.remove("col-lg-8");
+    centerContent.classList.add("col-lg-10");
     }else{
         hiddenPostsBtn.innerText = "NASCONDI ANNUNCI";
+        centerContent.classList.add("col-lg-8");
+    centerContent.classList.remove("col-lg-10");
     }
 }
 
@@ -33,10 +37,12 @@ const srcBarDisp = ()=>{
 
 const ifEnter = (event)=>{
     if(event.key === "Enter"){
-        let src = searchInput.value;
-        fetchFnc(src);
         searchBar.classList.add("d-none");
+        let src = searchInput.value;
+        otherTitle.innerText = "Risultati della tua ricerca";
+        console.log(searchInput.value);
         searchInput.value = "";
+        fetchFnc(src);
     }
 }
 
@@ -55,7 +61,7 @@ const displayFnc = (array) => {
     node.innerHTML = "";
     array.forEach(element => {
         let side = document.createElement("div");
-        side.classList.add("col-3", "my-2");
+        side.classList.add("col-sm-6", "col-md-4", "col-lg-3", "my-2");
         node.appendChild(side)
         
         let content = document.createElement("div");
