@@ -112,7 +112,7 @@ a:hover{
 }
 
 .img-card-top{
-    height: 24vh;
+    height: 12vw;
 }
 
 .p-album{
@@ -220,4 +220,107 @@ a:hover{
 
 .sidebar-right .col-12.d-flex.p-0{
     width: 16.6vw;
+}
+
+.resp-bottom-bar{
+    height: 10vh;
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+.resp-bottom-bar .fa-solid{
+    font-size: 15pt;
+    padding: 20px;
+    
+}
+
+.resp-bottom-bar p{
+    font-size: 8pt;
+}
+
+.resp-bottom-bar > .col-8.col-md-4 > div{
+    cursor: pointer;
+}
+
+.resp-input-search{
+    width: 100%;
+    border: none;
+    background-color: rgb(25, 25, 25);
+}
+
+.card-search{
+    position: relative;
+    height: 25vw;
+    border-radius: 10px;
+}
+
+.img-search-card{
+    position: absolute;
+    height: 17vw;
+    top: 5vw;
+    right: -3vw;
+    rotate: 30deg;
+    z-index: 0;
+}
+
+.podcast, .for-you, .new-entry,
+.pop, .hip-hop, .dance-electronic,
+.latin, .charts{
+    overflow: hidden;
+}
+
+.podcast{
+    background-color: orangered;
+}
+
+.for-you{
+    background-color: blue;
+}
+
+.new-entry{
+    background-color: fuchsia;
+}
+
+.pop{
+    background-color: green;
+}
+
+.hip-hop{
+    background-color: orange;
+}
+
+.dance-electronic{
+    background-color: rgb(255, 89, 0);
+}
+
+.latin{
+    background-color: fuchsia;
+}
+
+.charts{
+    background-color: purple;
+}
+
+input.resp-input-search + i.fa-solid.fa-magnifying-glass{
+    position: absolute;
+    top: 83px;
+    left: 30px;
+}
+
+footer{
+    height: 10vh;
+}
+
+@media screen and (max-width: 992px){
+    .top-bar, .sidebar-left,
+    .sidebar-right, .command-bar{
+        display: none !important;
+    }
+
+    .center-content{
+        left: 0;
+    }
+
+    .dynamic-content{
+        height: 100vh;
+    }    
 }

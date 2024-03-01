@@ -6,7 +6,8 @@ const searchBtn = document.querySelector(".searchBtn");
 const searchBar = document.querySelector(".ipt-src");
 const searchInput = document.querySelector(".input-search");
 const node = document.querySelector(".row.node");
-console.log(searchBar);
+const btmHomeBtn = document.querySelector(".bottom-home-btn");
+const btmSearchBtn = document.querySelector(".bottom-search-btn");
 
 const closeRight = ()=>{
     sidebarRight.classList.add("d-none");
@@ -33,7 +34,6 @@ const srcBarDisp = ()=>{
 const ifEnter = (event)=>{
     if(event.key === "Enter"){
         let src = searchInput.value;
-        console.log(src)
         fetchFnc(src);
         searchBar.classList.add("d-none");
         searchInput.value = "";
@@ -44,7 +44,6 @@ const fetchFnc = async (idSearch)=>{
     try{
         const response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${idSearch}`);
         let json = await response.json();
-        console.log(json.data);
         displayFnc(json.data);
 
     }catch(err){
@@ -82,7 +81,7 @@ const displayFnc = (array) => {
         content.appendChild(title);
 
     });
-    }
+}
 
 
 
@@ -94,3 +93,5 @@ btnRightClose.addEventListener("click", closeRight);
 hiddenPostsBtn.addEventListener("click", toggleRight);
 searchBtn.addEventListener("click", srcBarDisp);
 searchInput.addEventListener("keyup", (event)=>{ifEnter(event)});
+btmHomeBtn.addEventListener("click", ()=>{location.href = "index.html"});
+btmSearchBtn.addEventListener("click", ()=>{location.href = "search.html"});
