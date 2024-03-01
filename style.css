@@ -259,7 +259,6 @@ a:hover{
     top: 5vw;
     right: -3vw;
     rotate: 30deg;
-    z-index: 0;
 }
 
 .podcast, .for-you, .new-entry,
